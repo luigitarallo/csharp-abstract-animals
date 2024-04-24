@@ -17,7 +17,31 @@
                 animale.Verso();
                 animale.Mangia();
                 animale.CheAnimale();
+
+                if (animale is IVolante)
+                {
+                    IVolante volante = (IVolante)animale;
+                    FaiVolare(volante);
+                }
+
+                if (animale is INuotante)
+                {
+                    INuotante nuotante = (INuotante)animale;
+                    FaiNuotare(nuotante);
+                }
             }
+        }
+
+        // Metodi statici per far volare e nuotare
+
+        public static void FaiVolare(IVolante animale)
+        {
+            animale.Vola();
+        }
+
+        public static void FaiNuotare(INuotante animale)
+        {
+            animale.Nuota();
         }
     }
 }

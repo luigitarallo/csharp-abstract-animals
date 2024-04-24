@@ -36,7 +36,7 @@ namespace csharp_abstract_animals
         }
     }
 
-    public class Passerotto : Animale
+    public class Passerotto : Animale, IVolante
     {
         public override void Verso()
         {
@@ -52,9 +52,14 @@ namespace csharp_abstract_animals
         {
             Console.WriteLine("Sono un passerotto!");
         }
+
+        public void Vola()
+        {
+            Console.WriteLine("Sto volando!!!");
+        }
     }
 
-    public class Aquila : Animale
+    public class Aquila : Animale, IVolante
     {
         public override void Verso()
         {
@@ -70,9 +75,14 @@ namespace csharp_abstract_animals
         {
             Console.WriteLine("Sono un'aquila!");
         }
+
+        public void Vola()
+        {
+            Console.WriteLine("Sto volando!!!");
+        }
     }
 
-    public class Delfino : Animale
+    public class Delfino : Animale, INuotante
     {
         public override void Verso()
         {
@@ -87,6 +97,11 @@ namespace csharp_abstract_animals
         public override void CheAnimale()
         {
             Console.WriteLine("Sono un delfino!");
+        }
+
+        public void Nuota()
+        {
+            Console.WriteLine("Sto nuotando!!!");
         }
     }
 }
